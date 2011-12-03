@@ -13,6 +13,9 @@
 		972EC342148AC754006875E5 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 972EC340148AC754006875E5 /* Credits.rtf */; };
 		972EC345148AC754006875E5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 972EC344148AC754006875E5 /* AppDelegate.m */; };
 		972EC348148AC755006875E5 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 972EC346148AC755006875E5 /* MainMenu.xib */; };
+		972EC350148AC7E1006875E5 /* ReachabilityFaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 972EC34F148AC7E1006875E5 /* ReachabilityFaker.m */; };
+		972EC353148AC803006875E5 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 972EC352148AC803006875E5 /* GCDAsyncSocket.m */; };
+		972EC355148AC9CF006875E5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 972EC354148AC9CF006875E5 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,14 +24,19 @@
 		972EC334148AC754006875E5 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		972EC335148AC754006875E5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		972EC336148AC754006875E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		972EC339148AC754006875E5 /* FakeReachability-Info.plist */ = {isa = PBXFileReference; path = "FakeReachability-Info.plist"; sourceTree = "<group>"; };
+		972EC339148AC754006875E5 /* FakeReachability-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FakeReachability-Info.plist"; sourceTree = "<group>"; };
 		972EC33B148AC754006875E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		972EC33D148AC754006875E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		972EC33F148AC754006875E5 /* FakeReachability-Prefix.pch */ = {isa = PBXFileReference; path = "FakeReachability-Prefix.pch"; sourceTree = "<group>"; };
+		972EC33F148AC754006875E5 /* FakeReachability-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FakeReachability-Prefix.pch"; sourceTree = "<group>"; };
 		972EC341148AC754006875E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		972EC343148AC754006875E5 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		972EC343148AC754006875E5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		972EC344148AC754006875E5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		972EC347148AC755006875E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		972EC34E148AC7E1006875E5 /* ReachabilityFaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReachabilityFaker.h; sourceTree = "<group>"; };
+		972EC34F148AC7E1006875E5 /* ReachabilityFaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReachabilityFaker.m; sourceTree = "<group>"; };
+		972EC351148AC803006875E5 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		972EC352148AC803006875E5 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		972EC354148AC9CF006875E5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				972EC355148AC9CF006875E5 /* Security.framework in Frameworks */,
 				972EC332148AC754006875E5 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,6 +55,7 @@
 		972EC322148AC754006875E5 = {
 			isa = PBXGroup;
 			children = (
+				972EC354148AC9CF006875E5 /* Security.framework */,
 				972EC337148AC754006875E5 /* FakeReachability */,
 				972EC330148AC754006875E5 /* Frameworks */,
 				972EC32E148AC754006875E5 /* Products */,
@@ -82,10 +92,14 @@
 		972EC337148AC754006875E5 /* FakeReachability */ = {
 			isa = PBXGroup;
 			children = (
+				972EC351148AC803006875E5 /* GCDAsyncSocket.h */,
+				972EC352148AC803006875E5 /* GCDAsyncSocket.m */,
 				972EC343148AC754006875E5 /* AppDelegate.h */,
 				972EC344148AC754006875E5 /* AppDelegate.m */,
 				972EC346148AC755006875E5 /* MainMenu.xib */,
 				972EC338148AC754006875E5 /* Supporting Files */,
+				972EC34E148AC7E1006875E5 /* ReachabilityFaker.h */,
+				972EC34F148AC7E1006875E5 /* ReachabilityFaker.m */,
 			);
 			path = FakeReachability;
 			sourceTree = "<group>";
@@ -167,6 +181,8 @@
 			files = (
 				972EC33E148AC754006875E5 /* main.m in Sources */,
 				972EC345148AC754006875E5 /* AppDelegate.m in Sources */,
+				972EC350148AC7E1006875E5 /* ReachabilityFaker.m in Sources */,
+				972EC353148AC803006875E5 /* GCDAsyncSocket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
